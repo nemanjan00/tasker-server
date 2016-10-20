@@ -33,8 +33,6 @@ app.ws('/gate', function(ws, req) {
 				subscriptions[key].push(ws);
 			});
 		}
-
-		console.log(subscriptions);
 	});
 });
 
@@ -49,6 +47,8 @@ app.post('/', function (req, res) {
 		if(subscriptions[key] == undefined){
 			subscriptions[key] = [];
 		}
+
+		console.log(subscriptions[key]);
 
 		subscriptions[key] = subscriptions[key].filter(function (ws){
 			try{
