@@ -39,6 +39,8 @@ app.ws('/gate', function(ws, req) {
 // Gate for Tasker
 
 app.post('/', function (req, res) {
+	console.log(req.body);
+
 	var keys = req.body.key.split("|");
 
 	var sentTo = [];
