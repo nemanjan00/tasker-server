@@ -33,14 +33,14 @@ app.ws('/gate', function(ws, req) {
 				subscriptions[key].push(ws);
 			});
 		}
+
+		console.log(subscriptions);
 	});
 });
 
 // Gate for Tasker
 
 app.post('/', function (req, res) {
-	console.log(req.body);
-
 	var keys = req.body.key.split("|");
 
 	var sentTo = [];
