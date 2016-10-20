@@ -4,7 +4,7 @@
   "description": "Tasker server is server for receiving commands from Tasker and forwarding them to my PC. ",
   "main": "index.js",
   "scripts": {
-    "start": "node pm2.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
