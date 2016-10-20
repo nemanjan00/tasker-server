@@ -51,3 +51,36 @@ client:
 
 And, when server recieve event, it will send it as is... 
 
+### Tasker example task
+
+```xml
+<TaskerData sr="" dvi="1" tv="4.8u5m">
+	<Task sr="task6">
+		<cdate>1476936446375</cdate>
+		<edate>1476949681640</edate>
+		<id>6</id>
+		<nme>Next Song</nme>
+		<pri>100</pri>
+		<Action sr="act0" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%Server</Str>
+			<Str sr="arg1" ve="3">localhost:3000</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>116</code>
+			<Str sr="arg0" ve="3">%Server</Str>
+			<Str sr="arg1" ve="3"/>
+			<Str sr="arg2" ve="3">{"action":"nextSong","key":"home"}</Str>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Int sr="arg5" val="10"/>
+			<Str sr="arg6" ve="3">application/json</Str>
+			<Str sr="arg7" ve="3"/>
+			<Int sr="arg8" val="0"/>
+		</Action>
+	</Task>
+</TaskerData>
+```
+
