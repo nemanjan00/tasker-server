@@ -53,8 +53,6 @@ app.post('/', function (req, res) {
 				if(!sentTo.includes(ws)){
 					ws.send(JSON.stringify(req.body));
 
-					console.log(123);
-
 					sentTo.push(ws);
 				}
 				else
@@ -64,6 +62,8 @@ app.post('/', function (req, res) {
 
 				return true;
 			} catch(e){
+				console.log(e);
+
 				return false;
 			}
 		});
