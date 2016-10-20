@@ -50,7 +50,7 @@ app.post('/', function (req, res) {
 
 		subscriptions[key] = subscriptions[key].filter(function (ws){
 			try{
-				if(!sentTo.includes(ws)){
+				if(sentTo.indexOf(ws) == -1){
 					ws.send(JSON.stringify(req.body));
 
 					sentTo.push(ws);
@@ -62,8 +62,6 @@ app.post('/', function (req, res) {
 
 				return true;
 			} catch(e){
-				console.log(e);
-
 				return false;
 			}
 		});
