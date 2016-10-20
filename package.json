@@ -1,6 +1,6 @@
 {
   "name": "tasker-server",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Tasker server is server for receiving commands from Tasker and forwarding them to my PC. ",
   "main": "index.js",
   "scripts": {
