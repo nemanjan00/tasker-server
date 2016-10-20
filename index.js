@@ -48,12 +48,12 @@ app.post('/', function (req, res) {
 			subscriptions[key] = [];
 		}
 
-		console.log(subscriptions[key]);
-
 		subscriptions[key] = subscriptions[key].filter(function (ws){
 			try{
 				if(!sentTo.includes(ws)){
 					ws.send(JSON.stringify(req.body));
+
+					console.log(123);
 
 					sentTo.push(ws);
 				}
