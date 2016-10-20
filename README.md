@@ -18,7 +18,7 @@ Request example:
 
 POST /
 
-```json
+```javascript
 {
 	"action":"nextSong", //action you want to do (can not begin with _)
 	"key":"home|laptop" //client selectors (each client has to advertise with list of selectors)
@@ -27,7 +27,7 @@ POST /
 
 Response example: 
 
-```json
+```javascript
 {
 	"status": "ok", //event sent
 	"sentTo": 5 //sent to 5 clients
@@ -42,7 +42,7 @@ So, communication would look something like this:
 
 client:
 
-```json
+```javascript
 {
 	"message": "subscribe",
 	"keys": "home|laptop"
